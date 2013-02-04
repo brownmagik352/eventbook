@@ -1,6 +1,7 @@
 Eventbook::Application.routes.draw do
 
   resources :groups
+  resources :events
   root to: 'groups#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

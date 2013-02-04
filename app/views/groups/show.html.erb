@@ -1,2 +1,29 @@
 <h1 class="group-title"> <%= @group.name %> </h1>
 <div class = "creation-time"> <%= @group.created_at %> </div>
+
+<h5>Events</h5>
+<br />
+<% @group.events.each do |x| %>
+    <div class="x-title">
+      <%= x.title %>
+    </div>
+    <br />
+    <br />
+<% end %>
+
+
+<h4> Create a New Event </h4>
+<%= form_for(@event) do |f| %>
+<div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_area :title %>
+    <%= f.hidden_field :group_id, :value => @group.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<br />
+<br />
+<%= link_to("Home", groups_path) %>
