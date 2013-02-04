@@ -1,3 +1,28 @@
+h1 {
+	text-align: center;
+	color: blue;
+	font-size: 30pt;
+}
+.group-names {
+	text-align: center;
+	font-size: 24pt;
+}
+
+.group-title {
+	text-align: center;
+	color: red;
+	font-size: 26pt;
+	font-style: Arial;
+}
+
+.event-title {
+	color: green;
+}
+
+.field, .actions, h4 {
+	color: orange;
+	text-align: center;
+}
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
