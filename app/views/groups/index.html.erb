@@ -1,1 +1,7 @@
-<h1>HI TAYLOR</h1>
+<h1>Current Groups</h1>
+
+<% @groups.each do |x| %>
+	<div class="group-names">
+		<%= x.name %>
+	</div>
+<% end %>
