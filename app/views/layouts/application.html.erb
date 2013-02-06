@@ -5,6 +5,11 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= nav_bar(static: :top, brand: "Eventbook") do%>
+   <%= menu_group do %>
+   <%= menu_item "Home", root_path %>
+   <% end %>
+  <% end %>
 </head>
 <body>
 
