@@ -1,5 +1,11 @@
 Eventbook::Application.routes.draw do
 
+  get "static_pages/help"
+
+  get "static_pages/about_us"
+
+  get "static_pages/contact"
+
   resources :groups
   resources :events
   root to: 'groups#index'
