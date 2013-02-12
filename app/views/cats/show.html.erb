@@ -1,0 +1,9 @@
+<h1> <%= @cat.title %> </h1>
+
+<% @cat.groups.each do |x| %>
+
+	<div class = "group-names">
+		<%= link_to(x.name, x) %>
+	</div>
+
+<% end %>

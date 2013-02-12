@@ -1,0 +1,17 @@
+<h1> Cats </h1>
+
+<% @cats.each do |y| %>
+	<div class = "cat-names">
+		<%= link_to(y.title, y) %>
+	</div>
+
+<% end %>
+
+<br />
+<br />
+<div class = "link-names">
+<!-- <%= link_to("Make a New Category", new_cat_path) %> -->
+<br />
+<%= link_to("Make a New Group", new_group_path) %>
+</div>
+

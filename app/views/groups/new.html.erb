@@ -3,9 +3,13 @@
 
 <%= form_for(@group) do |f| %>
 	<div class="field">
-		<%= f.label :name %> <br />
 		<%= f.text_field :name%>
 	</div>
+
+	<div class="field">
+		<%= f.select(:cat_id, options_for_select([["Sports", 1], ["A Capella", 2], ["Improv", 3]])) %>
+	</div>
+	
 	
 	<div class="actions">
 		<%= f.submit %>

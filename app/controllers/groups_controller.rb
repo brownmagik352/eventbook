@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
 	end
 
 	def new
+		@cats = Cat.all
 		@group = Group.new
 	end
 
