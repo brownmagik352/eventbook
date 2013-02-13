@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212015716) do
+ActiveRecord::Schema.define(:version => 20130213034413) do
 
   create_table "cats", :force => true do |t|
     t.text     "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130212015716) do
     t.integer  "group_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.date     "edate"
   end
 
   add_index "events", ["group_id"], :name => "index_events_on_group_id"

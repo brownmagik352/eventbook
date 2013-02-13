@@ -6,6 +6,7 @@
 <% @group.events.each do |event| %>
     <div class="event-title">
       <%= event.title %>
+      <%= event.edate %>
     </div>
     <br />
     <br />
@@ -19,6 +20,12 @@
     <%= f.text_area :title %>
     <%= f.hidden_field :group_id, :value => @group.id %>
   </div>
+
+  <div class = "field">
+    <%= f.label :edate %>
+    <%= f.date_select(:edate) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
