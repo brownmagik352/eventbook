@@ -1,0 +1,10 @@
+<h1> Events </h1>
+
+<% @events.each do |x| %>
+	
+	<div class = "event-names">
+		<%= x.title + ":\t"%>
+		<%= x.edate %>
+	</div>
+
+<% end %>
