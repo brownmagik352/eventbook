@@ -23,7 +23,7 @@
 
   <div class = "field">
     <%= f.label :edate %>
-    <%= f.date_select(:edate) %>
+    <%= f.date_select(:edate, :start_year => Time.now.year) %>
   </div>
 
   <div class="actions">
