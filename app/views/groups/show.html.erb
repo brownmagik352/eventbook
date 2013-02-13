@@ -5,8 +5,8 @@
 <br />
 <% @group.events.each do |event| %>
     <div class="event-title">
-      <%= event.title %>
-      <%= event.edate %>
+      <%= event.title + ":\t"%>
+      <%= event.edate.strftime("%B %d, %Y") %>
     </div>
     <br />
     <br />
