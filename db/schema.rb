@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130214013650) do
+ActiveRecord::Schema.define(:version => 20130214020858) do
 
   create_table "cats", :force => true do |t|
     t.text     "title"
@@ -22,10 +22,11 @@ ActiveRecord::Schema.define(:version => 20130214013650) do
   create_table "events", :force => true do |t|
     t.string   "title"
     t.integer  "group_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.date     "edate"
     t.string   "location"
+    t.text     "description"
   end
 
   add_index "events", ["group_id"], :name => "index_events_on_group_id"
