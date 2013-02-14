@@ -1,12 +1,13 @@
 <h1 class="group-title"> <%= @group.name %> </h1>
 <!-- <div class = "creation-time"> <%= @group.created_at %> </div> -->
 
-<h5>Events</h5>
+<h2>Events</h2>
 <br />
-<% @group.events.each do |event| %>
+<% @events2.each do |event| %>
     <div class="event-title">
       <%= event.title + ":\t"%>
       <%= event.edate.strftime("%B %d, %Y") %>
+      <%= ":\t" + event.location %>
     </div>
     <br />
     <br />
@@ -16,13 +17,14 @@
 <h4> Create a New Event </h4>
 <%= form_for(@event) do |f| %>
 <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_area :title %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
     <%= f.hidden_field :group_id, :value => @group.id %>
-  </div>
-
-  <div class = "field">
-    <%= f.label :edate %>
+    <br />
+    <!--<%= f.label :edate %>-->
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <br />
     <%= f.date_select(:edate, :start_year => Time.now.year) %>
   </div>
 

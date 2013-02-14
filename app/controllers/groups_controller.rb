@@ -17,6 +17,8 @@ class GroupsController < ApplicationController
 
 	def show
 		@group = Group.find(params[:id])
+		@events2 = @group.events.sort { |a,b| a.edate <=> b.edate }
+		# events2 is sorted by ascending date
 		@event = Event.new
 	end
 
